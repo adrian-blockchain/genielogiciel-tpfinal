@@ -20,6 +20,6 @@ public class MultipleTaxes implements TaxInterface {
                 .map(strategy -> strategy.calculateTax(price))
                 .reduce(BigDecimal::add)
                 .orElse(BigDecimal.ZERO)
-                .setScale(2, RoundingMode.HALF_UP);
+                .setScale(1, RoundingMode.HALF_UP);
     }
 }
